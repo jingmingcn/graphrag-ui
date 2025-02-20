@@ -120,6 +120,8 @@ class App(BaseApp):
             ) as self._tabs["help-tab"]:
                 self.help_page = HelpPage(self)
 
+        gr.Markdown(f"&copy; Shandong University 2025", elem_classes=["footer_main"])
+
         if KH_ENABLE_FIRST_SETUP:
             with gr.Column(visible=False) as self.setup_page_wrapper:
                 self.setup_page = SetupPage(self)

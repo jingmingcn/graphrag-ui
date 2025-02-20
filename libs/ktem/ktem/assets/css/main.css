@@ -7,6 +7,14 @@ footer {
   display: none !important;
 }
 
+.footer_main {
+  position: fixed;
+  bottom: 0;
+  text-align:center;
+  padding: 0px;
+  margin: 0px;
+}
+
 /* customize scrollbar */
 ::-webkit-scrollbar {
   background: var(--background-fill-primary);
