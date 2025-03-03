@@ -120,7 +120,7 @@ class App(BaseApp):
             ) as self._tabs["help-tab"]:
                 self.help_page = HelpPage(self)
 
-        gr.Markdown(f"&copy;山东大学2025 内测版", elem_classes=["footer_main"])
+        gr.Markdown(f"&copy;2025 生物医药数据科学专业教学内部测试版", elem_classes=["footer_main"])
 
         if KH_ENABLE_FIRST_SETUP:
             with gr.Column(visible=False) as self.setup_page_wrapper:

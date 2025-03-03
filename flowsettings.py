@@ -354,7 +354,7 @@ GRAPHRAG_INDICES = [
 
 KH_INDICES = [
     {
-        "name": "文件库",
+        "name": "File Collection",
         "config": {
             "supported_file_types": (
                 ".png, .jpeg, .jpg, .tiff, .tif, .pdf, .xls, .xlsx, .doc, .docx, "
