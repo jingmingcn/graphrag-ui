@@ -97,7 +97,8 @@ class App(BaseApp):
                         "Resources",
                         elem_id="resources-tab",
                         id="resources-tab",
-                        visible=not self.f_user_management,
+                        # visible=not self.f_user_management,
+                        visible= self.f_user_management,
                         elem_classes=["fill-main-area-height", "scrollable"],
                     ) as self._tabs["resources-tab"]:
                         self.resources_page = ResourcesTab(self)
