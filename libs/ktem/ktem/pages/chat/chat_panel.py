@@ -6,9 +6,9 @@ KH_DEMO_MODE = getattr(flowsettings, "KH_DEMO_MODE", False)
 
 if not KH_DEMO_MODE:
     PLACEHOLDER_TEXT = (
-        "This is the beginning of a new conversation.\n"
-        "Start by uploading a file or a web URL. "
-        "Visit Files tab for more options (e.g: GraphRAG)."
+       "这是新对话的开始。\n"
+    "首先上传文件或网址。"
+    "访问“文件”选项卡以获取更多选项（例如：GraphRAG）。"
     )
 else:
     PLACEHOLDER_TEXT = (
@@ -39,7 +39,7 @@ class ChatPanel(BasePage):
                 scale=20,
                 file_count="multiple",
                 placeholder=(
-                    "Type a message, search the @web, or tag a file with @filename"
+                    "输入消息、搜索@web，或使用@filename 标记文件"
                 ),
                 container=False,
                 show_label=False,

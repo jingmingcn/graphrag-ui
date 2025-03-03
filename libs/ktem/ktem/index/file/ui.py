@@ -1618,13 +1618,13 @@ class FileSelector(BasePage):
         self.mode = gr.Radio(
             value=default_mode,
             choices=[
-                ("Search All", "all"),
-                ("Search In File(s)", "select"),
+                ("全部检索", "all"),
+                ("文件检索", "select"),
             ],
             container=False,
         )
         self.selector = gr.Dropdown(
-            label="Files",
+            label="文件",
             value=default_selector,
             choices=[],
             multiselect=True,

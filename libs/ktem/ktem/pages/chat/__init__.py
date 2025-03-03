@@ -272,7 +272,7 @@ class ChatPage(BasePage):
 
                 if len(self._app.index_manager.indices) > 0:
                     quick_upload_label = (
-                        "Quick Upload" if not KH_DEMO_MODE else "Or input new paper URL"
+                        "快速上传" if not KH_DEMO_MODE else "Or input new paper URL"
                     )
 
                     with gr.Accordion(label=quick_upload_label) as _:
@@ -314,17 +314,17 @@ class ChatPage(BasePage):
                 self.chat_panel = ChatPanel(self._app)
 
                 with gr.Accordion(
-                    label="Chat settings",
+                    label="聊天设置",
                     elem_id="chat-settings-expand",
                     open=False,
                     visible=not KH_DEMO_MODE,
                 ) as self.chat_settings:
                     with gr.Row(elem_id="quick-setting-labels"):
-                        gr.HTML("Reasoning method")
+                        gr.HTML("推理方法")
                         gr.HTML(
-                            "Model", visible=not KH_DEMO_MODE and not KH_SSO_ENABLED
+                            "模型", visible=not KH_DEMO_MODE and not KH_SSO_ENABLED
                         )
-                        gr.HTML("Language")
+                        gr.HTML("语言")
 
                     with gr.Row():
                         reasoning_setting = (
@@ -372,7 +372,7 @@ class ChatPage(BasePage):
                         if not config("USE_LOW_LLM_REQUESTS", default=False, cast=bool):
                             self.use_mindmap = gr.State(value=True)
                             self.use_mindmap_check = gr.Checkbox(
-                                label="Mindmap (on)",
+                                label="思维导图 (开启)",
                                 container=False,
                                 elem_id="use-mindmap-checkbox",
                                 value=True,
@@ -380,7 +380,7 @@ class ChatPage(BasePage):
                         else:
                             self.use_mindmap = gr.State(value=False)
                             self.use_mindmap_check = gr.Checkbox(
-                                label="Mindmap (off)",
+                                label="思维导图 (关闭)",
                                 container=False,
                                 elem_id="use-mindmap-checkbox",
                                 value=False,
@@ -390,7 +390,7 @@ class ChatPage(BasePage):
                 scale=INFO_PANEL_SCALES[False], elem_id="chat-info-panel"
             ) as self.info_column:
                 with gr.Accordion(
-                    label="Information panel", open=True, elem_id="info-expand"
+                    label="信息面板", open=True, elem_id="info-expand"
                 ):
                     self.modal = gr.HTML("<div id='pdf-modal'></div>")
                     self.plot_panel = gr.Plot(visible=False)
